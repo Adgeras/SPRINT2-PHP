@@ -31,8 +31,7 @@ require_once './config/connect.php';
 
 <div class="container center_div">
 <h4>Pridėti naują darbuotoją</h4>
-<form action="../functions/create.php" method="post">
-  <p>Darbuotojo vardas</p>
+<form action="./functions/create.php" method="post">
   <input class="center" type="text" name="name" placeholder="Vardas">
   <button type="submit">Add</button>
 </form>

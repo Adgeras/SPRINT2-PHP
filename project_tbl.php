@@ -28,3 +28,10 @@ require_once './config/connect.php';
   </tbody>
 </table> 
 
+<div class="container center_div">
+<h4>Pridėti naują projektą</h4>
+<form action="./functions/create.php" method="post">
+  <input class="center" type="text" name="projectName" placeholder="Projekto pavadinimas">
+  <button type="submit">Add</button>
+</form>
+</div>

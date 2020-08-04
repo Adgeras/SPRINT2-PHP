@@ -13,10 +13,15 @@
   <a class="btn btn-secondary"href="/SPRINT2PHP?a=projektai">Projektai</a>
 <?php
     $lenta = 'employee_tbl.php'; // pagal nutylejima sita
-    if (isset($_GET["a"]) AND $_GET["a"] === 'projektai') {
+    if (isset($_GET["a"]) 
+    
+    
+    AND $_GET["a"] === 'projektai') {
     $lenta = 'project_tbl.php';
-    } 
-include $lenta;
+    } else $lenta = 'employee_tbl.php';
+
+    include $lenta;
+
 ?>
 
 
