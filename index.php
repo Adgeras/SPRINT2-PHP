@@ -9,7 +9,25 @@
 </head>
 <body>
 
+<!-- $lenta = 'project_tbl.php';
+if (isset($_GET["a"]) AND $_GET["a"] === 'darbuotojai') {
+ $lenta = 'darbuotojai_tbl.php';
+} 
+ 
+include $lenta;
+ -->
+
+
+
+
+<a href="http://localhost/SPRINT2%20PHP?a=darbuotojai">Darbuotojai</a>
+
+<a href="http://localhost/SPRINT2%20PHP?a=projektai">Projektai</a>
+
+<?php if (isset($_GET["a"]) AND $_GET["a"] === 'darbuotojai'){ ?>
 <h4 class="text-center">Darbuotojai & Projektai</h4>
+
+
 
 <table class="table">
   <thead>
@@ -36,14 +54,18 @@ require_once 'connect.php';
           </tr>
         <?php // vel prijungiu php koda
       }       
-
   ?>
   </tbody>
 </table> 
-
 <?php
 
+/***********************ANTROS LENTELES PAJUNGIMAS */
+}else {
+echo  '<h4 class="text-center">Projektai</h4>';
 
-    ?> 
+
+}
+
+?>
 </body>
 </html>
