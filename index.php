@@ -8,89 +8,28 @@
     <title>Darbuotojai&Projektai</title>
 </head>
 <body>
+  <a class="btn btn-primary"href="http://localhost/SPRINT2%20PHP?a=darbuotojai">Darbuotojai</a>
+  
+  <a class="btn btn-secondary"href="http://localhost/SPRINT2%20PHP?a=projektai">Projektai</a>
+<?php
+require_once 'connect.php';
 
-<!-- $lenta = 'project_tbl.php';
-if (isset($_GET["a"]) AND $_GET["a"] === 'darbuotojai') {
- $lenta = 'darbuotojai_tbl.php';
-} 
- 
+    $lenta = 'employee_tbl.php'; // pagal nutylejima sita
+    if (isset($_GET["a"]) AND $_GET["a"] === 'projektai') {
+    $lenta = 'project_tbl.php';
+    } else {
+      $lenta = 'employee_tbl.php';
+    }
 include $lenta;
- -->
-
-<a class="btn btn-primary"href="http://localhost/SPRINT2%20PHP?a=darbuotojai">Darbuotojai</a>
-
-<a class="btn btn-secondary"href="http://localhost/SPRINT2%20PHP?a=projektai">Projektai</a>
-
-<?php if (isset($_GET["a"]) AND $_GET["a"] === 'darbuotojai'){ ?>
-<h4 class="text-center">Darbuotojai</h4>
-
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col" class="text-center" style="width:20%">ID</th>
-      <th scope="col" class="text-center" style="width:60%">Darbuotojo vardas</th>
-      <th scope="col" class="text-center" style="width:20%">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-  
-  <?php
-  // duombazės pajungimas:
-require_once 'connect.php';
-
-    $darbuotojai = (mysqli_query($connect, "SELECT * FROM darbuotojai.ddarbuotojai"));
-    $darbuotojai = mysqli_fetch_all($darbuotojai);
-    //printink($darbuotojai);
-      foreach($darbuotojai as $darbuotojas){
-        ?> <!-- atjungiu php koda -->
-          <tr>
-            <th scope="row" class="text-center" style="width:20%"><?=$darbuotojas[0] ?></th>
-            <td class="text-center" style="width:20%"><?=$darbuotojas[1]?></td>
-          </tr>
-        <?php // vel prijungiu php koda
-      }       
-  ?>
-  </tbody>
-</table> 
-<?php
-/************************************************************************************* */
-/***********************ANTROS LENTELES PAJUNGIMAS */
-/*************************************************************************************** */
-} else { 
-
 ?>
-<h4 class="text-center">Projektai</h4>
+<h4>Pridėti naują darbuotoją</h4>
+<form action="" method="">
+  <p>Title</p>
+  <input type="text" name="title">
+  <p>Aprašas</p>
+  <textarea name="description"></textarea>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col" class="text-center" style="width:20%">ID</th>
-      <th scope="col" class="text-center" style="width:60%">Projektas</th>
-      <th scope="col" class="text-center" style="width:20%">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-  
-  <?php
-  // duombazės pajungimas:
-require_once 'connect.php';
+</form>
 
-    $projektai = (mysqli_query($connect, "SELECT * FROM darbuotojai.projektai"));
-    $projektai = mysqli_fetch_all($projektai);
-    // printink($projektai);
-      foreach($projektai as $projektas){
-        ?> <!-- atjungiu php koda -->
-          <tr>
-            <th scope="row" class="text-center" style="width:20%"><?=$projektas[0] ?></th>
-            <td class="text-center" style="width:20%"><?=$projektas[1]?></td>
-          </tr>
-        <?php // vel prijungiu php koda
-      }       
-  ?>
-  </tbody>
-</table> 
-<?php
-}
-?>
 </body>
 </html>
