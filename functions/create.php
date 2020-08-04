@@ -10,6 +10,6 @@ if (isset($name)){
     mysqli_query($connect, "INSERT INTO `darbuotojai`.`ddarbuotojai` (`Darbuotojo_Vardas`) VALUES ('$name')");
     header("location: http://localhost/SPRINT2PHP/?a=darbuotojai");
 } else {mysqli_query($connect, "INSERT INTO `darbuotojai`.`projektai` (`Projektai`) VALUES ('$project')");
-    header("location: http://localhost/SPRINT2PHP/?a=projektai ");
+    header("location: http://localhost/SPRINT2PHP/?a=projektai");
 }
 ?>
