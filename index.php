@@ -17,17 +17,12 @@ if (isset($_GET["a"]) AND $_GET["a"] === 'darbuotojai') {
 include $lenta;
  -->
 
+<a class="btn btn-primary"href="http://localhost/SPRINT2%20PHP?a=darbuotojai">Darbuotojai</a>
 
-
-
-<a href="http://localhost/SPRINT2%20PHP?a=darbuotojai">Darbuotojai</a>
-
-<a href="http://localhost/SPRINT2%20PHP?a=projektai">Projektai</a>
+<a class="btn btn-secondary"href="http://localhost/SPRINT2%20PHP?a=projektai">Projektai</a>
 
 <?php if (isset($_GET["a"]) AND $_GET["a"] === 'darbuotojai'){ ?>
-<h4 class="text-center">Darbuotojai & Projektai</h4>
-
-
+<h4 class="text-center">Darbuotojai</h4>
 
 <table class="table">
   <thead>
@@ -58,14 +53,44 @@ require_once 'connect.php';
   </tbody>
 </table> 
 <?php
-
+/************************************************************************************* */
 /***********************ANTROS LENTELES PAJUNGIMAS */
-}else {
-echo  '<h4 class="text-center">Projektai</h4>';
+/*************************************************************************************** */
+} else { 
 
+?>
+<h4 class="text-center">Projektai</h4>
 
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" class="text-center" style="width:20%">ID</th>
+      <th scope="col" class="text-center" style="width:60%">Projektas</th>
+      <th scope="col" class="text-center" style="width:20%">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+  <?php
+  // duombazės pajungimas:
+require_once 'connect.php';
+
+    $projektai = (mysqli_query($connect, "SELECT * FROM darbuotojai.projektai"));
+    $projektai = mysqli_fetch_all($projektai);
+    // printink($projektai);
+      foreach($projektai as $projektas){
+        ?> <!-- atjungiu php koda -->
+          <tr>
+            <th scope="row" class="text-center" style="width:20%"><?=$projektas[0] ?></th>
+            <td class="text-center" style="width:20%"><?=$projektas[1]?></td>
+          </tr>
+        <?php // vel prijungiu php koda
+      }       
+  ?>
+  </tbody>
+</table> 
+<?php
 }
-
 ?>
 </body>
 </html>
