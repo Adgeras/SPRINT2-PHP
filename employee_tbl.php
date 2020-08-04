@@ -10,7 +10,8 @@
   
   <?php
   // duombazės pajungimas:
-require_once 'connect.php';
+require_once './config/connect.php';
+
 
     $darbuotojai = (mysqli_query($connect, "SELECT * FROM darbuotojai.ddarbuotojai"));
     $darbuotojai = mysqli_fetch_all($darbuotojai);
@@ -27,4 +28,12 @@ require_once 'connect.php';
   ?>
   </tbody>
 </table> 
-<?php
+
+<div class="container center_div">
+<h4>Pridėti naują darbuotoją</h4>
+<form action="../functions/create.php" method="post">
+  <p>Darbuotojo vardas</p>
+  <input class="center" type="text" name="name" placeholder="Vardas">
+  <button type="submit">Add</button>
+</form>
+</div>

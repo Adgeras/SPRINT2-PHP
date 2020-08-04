@@ -8,28 +8,17 @@
     <title>Darbuotojai&Projektai</title>
 </head>
 <body>
-  <a class="btn btn-primary"href="http://localhost/SPRINT2%20PHP?a=darbuotojai">Darbuotojai</a>
+  <a class="btn btn-primary"href="/SPRINT2PHP?a=darbuotojai">Darbuotojai</a>
   
-  <a class="btn btn-secondary"href="http://localhost/SPRINT2%20PHP?a=projektai">Projektai</a>
+  <a class="btn btn-secondary"href="/SPRINT2PHP?a=projektai">Projektai</a>
 <?php
-require_once 'connect.php';
-
     $lenta = 'employee_tbl.php'; // pagal nutylejima sita
     if (isset($_GET["a"]) AND $_GET["a"] === 'projektai') {
     $lenta = 'project_tbl.php';
-    } else {
-      $lenta = 'employee_tbl.php';
-    }
+    } 
 include $lenta;
 ?>
-<h4>Pridėti naują darbuotoją</h4>
-<form action="" method="">
-  <p>Title</p>
-  <input type="text" name="title">
-  <p>Aprašas</p>
-  <textarea name="description"></textarea>
 
-</form>
 
 </body>
 </html>

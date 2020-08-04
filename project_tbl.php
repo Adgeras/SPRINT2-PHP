@@ -10,7 +10,7 @@
   
   <?php
   // duombazės pajungimas:
-require_once 'connect.php';
+require_once './config/connect.php';
 
     $projektai = (mysqli_query($connect, "SELECT * FROM darbuotojai.projektai"));
     $projektai = mysqli_fetch_all($projektai);
@@ -27,4 +27,4 @@ require_once 'connect.php';
   ?>
   </tbody>
 </table> 
-<?php
+

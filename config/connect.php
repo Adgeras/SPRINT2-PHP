@@ -7,9 +7,4 @@ if (!$connect) {
  die("Database connect failed");
 }  
 
-function printink($var){
-echo "<pre>";
-print_r($var);
-echo "</pre>";
-}
 ?>
