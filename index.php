@@ -9,17 +9,15 @@
 </head>
 <body>
   <a class="btn btn-primary"href="/SPRINT2PHP?a=darbuotojai">Darbuotojai</a>
-  
   <a class="btn btn-secondary"href="/SPRINT2PHP?a=projektai">Projektai</a>
+  
 <?php
     $lenta = 'employee_tbl.php'; // pagal nutylejima sita
-    if (isset($_GET["a"]) 
     
+    if (isset($_GET["a"]) AND $_GET["a"] === 'projektai') {
+      $lenta = 'project_tbl.php';
+    } 
     
-    AND $_GET["a"] === 'projektai') {
-    $lenta = 'project_tbl.php';
-    } else $lenta = 'employee_tbl.php';
-
     include $lenta;
 
 ?>

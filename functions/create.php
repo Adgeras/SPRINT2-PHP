@@ -8,8 +8,8 @@ $project = $_POST['projectName'];
 
 if (isset($name)){
     mysqli_query($connect, "INSERT INTO `darbuotojai`.`ddarbuotojai` (`Darbuotojo_Vardas`) VALUES ('$name')");
-    header("location: ../employee_tbl.php");
+    header("location: http://localhost/SPRINT2PHP/?a=darbuotojai");
 } else {mysqli_query($connect, "INSERT INTO `darbuotojai`.`projektai` (`Projektai`) VALUES ('$project')");
-        header("location: ../project_tbl.php");
+    header("location: http://localhost/SPRINT2PHP/?a=projektai ");
 }
 ?>
