@@ -19,9 +19,9 @@ require_once './config/connect.php';
       foreach($darbuotojai as $darbuotojas){
         ?> <!-- atjungiu php koda -->
           <tr>
-            <th scope="row" class="text-center" style="width:20%"><?=$darbuotojas[0] ?></th>
-            <td class="text-center" style="width:20%"><?=$darbuotojas[1]?></td>
-            <td class="text-center" style="width:20%"></td>
+            <td scope="row" class="text-center" style="width:20%"><?=$darbuotojas[0] ?></td>
+            <td class="text-center" style="width:40%"><?=$darbuotojas[1]?></td>
+            <td class="text-center" style="width:20%"><a href="update.php?id=" type="button" style="background-color: white;">UPDATE</a></td>
           </tr>
         <?php // vel prijungiu php koda
       }       

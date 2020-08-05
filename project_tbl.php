@@ -18,9 +18,9 @@ require_once './config/connect.php';
       foreach($projektai as $projektas){
         ?> <!-- atjungiu php koda -->
           <tr>
-            <th scope="row" class="text-center" style="width:20%"><?=$projektas[0] ?></th>
+            <td scope="row" class="text-center" style="width:20%"><?=$projektas[0] ?></td>
             <td class="text-center" style="width:40%"><?=$projektas[1]?></td>
-            <td class="text-center" style="width:20%"></td>
+            <td class="text-center" style="width:20%"><a href="update.php?id=" type="button" style="background-color: white;">UPDATE</a></td>
           </tr>
         <?php // vel prijungiu php koda
       }       
