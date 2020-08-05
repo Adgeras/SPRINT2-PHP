@@ -4,7 +4,5 @@ $connect = mysqli_connect($host = 'localhost', $user = 'root', $password = 'mysq
 //printink($connect);
 
 if (!$connect) {
- die("Database connect failed");
-}  
-
-?>
+    die("Database connect failed");
+}
