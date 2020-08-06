@@ -7,9 +7,9 @@ $name = $_POST['name'];
 $project = $_POST['projectName'];
 
 if (isset($name)) {
-    mysqli_query($connect, "INSERT INTO `darbuotojai`.`ddarbuotojai` (`Darbuotojo_Vardas`) VALUES ('$name')");
+    mysqli_query($connect, "INSERT INTO `darbuotojai`.`employees` (`Name`) VALUES ('$name')");
     header("location: http://localhost/SPRINT2PHP/?a=darbuotojai");
 } else {
-    mysqli_query($connect, "INSERT INTO `darbuotojai`.`projektai` (`Projektai`) VALUES ('$project')");
+    mysqli_query($connect, "INSERT INTO `darbuotojai`.`projects` (`Project`) VALUES ('$project')");
     header("location: http://localhost/SPRINT2PHP/?a=projektai");
 }

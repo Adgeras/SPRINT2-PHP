@@ -14,9 +14,11 @@
   <a class="btn btn-secondary" href="/SPRINT2PHP?a=projektai">Projektai</a>
 
   <?php
-  $lenta = 'employee_tbl.php'; // pagal nutylejima sita
+
+  $lenta = 'employees_tbl.php'; // pagal nutylejima sita
 
   if (isset($_GET["a"]) and $_GET["a"] === 'projektai') {
+    // ob_start();
     $lenta = 'project_tbl.php';
   }
 
