@@ -10,18 +10,19 @@
 </head>
 
 <body>
-  <a class="btn btn-primary" href="/SPRINT2PHP?a=darbuotojai">Darbuotojai</a>
-  <a class="btn btn-secondary" href="/SPRINT2PHP?a=projektai">Projektai</a>
+  <a class="btn btn-primary" href="/SPRINT2PHP?a=darbuotojai">Employees</a>
+  <a class="btn btn-secondary" href="/SPRINT2PHP?a=projektai">Projects</a>
+  <a class="btn btn-success" href="/SPRINT2PHP?a=innerJoin">Employees&Projects</a>
 
   <?php
 
   $lenta = 'employees_tbl.php'; // pagal nutylejima sita
 
   if (isset($_GET["a"]) and $_GET["a"] === 'projektai') {
-    // ob_start();
     $lenta = 'project_tbl.php';
+  } elseif (isset($_GET["a"]) and $_GET["a"] === 'innerJoin') {
+    $lenta = 'emploAndProjects_tbl.php';
   }
-
   include $lenta;
 
   ?>

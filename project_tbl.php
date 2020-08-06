@@ -22,7 +22,11 @@
       <tr>
         <td scope="row" class="text-center" style="width:20%"><?= $projekt[0] ?></td>
         <td class="text-center" style="width:40%"><?= $projekt[1] ?></td>
-        <td class="text-center" style="width:20%"><a href="update.php?id=" type="button" style="background-color: white;">UPDATE</a></td>
+        <td class="text-center" style="width:20%">
+          <a href="update.php?id=" type="button" class="btn btn-warning">
+            UPDATE
+          </a>
+        </td>
       </tr>
     <?php // vel prijungiu php koda
     }
@@ -31,9 +35,9 @@
 </table>
 
 <div class="container center_div">
-  <h4>Pridėti naują projektą</h4>
+  <h4>Add new project</h4>
   <form action="./functions/create.php" method="post">
     <input class="center" type="text" name="projectName" placeholder="Project name">
-    <button type="submit">Add</button>
+    <button type="submit">ADD</button>
   </form>
 </div>

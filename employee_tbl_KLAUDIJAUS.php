@@ -15,7 +15,7 @@
 
     $darbuotojai = mysqli_query($connect, "SELECT id, darbuotojo_vardas FROM ddarbuotojai");
     printink($darbuotojai);
-    if (mysqli_num_rows($darbuotojai) > 1) { // pasiziuriu ar lenteleje kas nors yra
+    if (mysqli_num_rows($darbuotojai) > 0) { // pasiziuriu ar lenteleje kas nors yra
       while ($row = mysqli_fetch_assoc($darbuotojai)) {
         $DarbuotojoID = $row['ID'];
         $DarbuotojoVardas = $row['darbuotojo_vardas'];
