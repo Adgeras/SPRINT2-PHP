@@ -19,9 +19,7 @@
         foreach ($employees as $emplo) {
         ?>
             <!-- atjungiu php koda -->
-            <tr style="line-height: 15px;
-                        min-height: 15px;
-                        height: 15px">
+            <tr>
                 <td scope="row" class="text-center" style="width:20%"><?= $emplo[0] ?></td>
                 <td class="text-center" style="width:40%"><?= $emplo[1] ?></td>
                 <td class="text-center" style="width:20%">
