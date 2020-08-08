@@ -3,7 +3,7 @@
     <tr>
       <th scope="col" class="text-center" style="width:20%">ID</th>
       <th scope="col" class="text-center" style="width:40%">Project</th>
-      <th scope="col" class="text-center" style="width:20%">Action</th>
+      <th scope="col" class="text-center" style="width:40%">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -22,11 +22,15 @@
       <tr>
         <td scope="row" class="text-center" style="width:20%"><?= $projekt[0] ?></td>
         <td class="text-center" style="width:40%"><?= $projekt[1] ?></td>
-        <td class="text-center" style="width:20%">
+        <td class="text-center" style="width:40%">
           <a href="updatePRJ.php?id=<?= $projekt[0] ?>" type="button" class="btn btn-warning">
             UPDATE
           </a>
+          <a href="delete.php?id=<?= $projekt[0] ?>" type="button" class="btn btn-danger">
+            DELETE
+          </a>
         </td>
+
       </tr>
     <?php // vel prijungiu php koda
     }
