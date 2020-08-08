@@ -23,7 +23,7 @@
                 <td scope="row" class="text-center" style="width:20%"><?= $emplo[0] ?></td>
                 <td class="text-center" style="width:40%"><?= $emplo[1] ?></td>
                 <td class="text-center" style="width:20%">
-                    <a href="update.php?id=<?= $emplo[0] ?>" type="button" class="btn btn-warning">
+                    <a href="updateEMP.php?id=<?= $emplo[0] ?>" type="button" class="btn btn-warning">
                         UPDATE
                     </a>
                 </td>

@@ -22,7 +22,7 @@
     $lenta = 'project_tbl.php';
   } elseif (isset($_GET["a"]) and $_GET["a"] === 'innerJoin') {
     $lenta = 'emploAndProjects_tbl.php';
-  }
+  } else $lenta = 'employees_tbl.php';
   include $lenta;
 
   ?>

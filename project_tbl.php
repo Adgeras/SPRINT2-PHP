@@ -11,7 +11,7 @@
     <?php
     // connect to database:
     require_once './config/connect.php';
-    require_once './functions/functions.php';
+    //require_once './functions/functions.php';
 
     $projects = (mysqli_query($connect, "SELECT * FROM darbuotojai.projects"));
     $projects = mysqli_fetch_all($projects);
@@ -23,7 +23,7 @@
         <td scope="row" class="text-center" style="width:20%"><?= $projekt[0] ?></td>
         <td class="text-center" style="width:40%"><?= $projekt[1] ?></td>
         <td class="text-center" style="width:20%">
-          <a href="update.php?id=" type="button" class="btn btn-warning">
+          <a href="updatePRJ.php?id=<?= $projekt[0] ?>" type="button" class="btn btn-warning">
             UPDATE
           </a>
         </td>
