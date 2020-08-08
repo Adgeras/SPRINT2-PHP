@@ -1,7 +1,7 @@
 <table class="table" style="background-color: #28A745;">
     <thead>
         <tr>
-            <th scope="col" class="text-center" style="width:20%">ID</th>
+            <th scope="col" class="text-center" style="width:20%">Project_ID</th>
             <th scope="col" class="text-center" style="width:30%">Name</th>
             <th scope="col" class="text-center" style="width:30%">Project</th>
             <th scope="col" class="text-center" style="width:20%">Action</th>
@@ -15,10 +15,11 @@
         //require_once './functions/functions.php';
 
 
-        $emploAndProjects = mysqli_query($connect, "SELECT darbuotojai.employees.ID, name, project
-                                            FROM projects
-                                            inner join employees 
-                                            on employees.ID = projects.ID;");
+        $emploAndProjects = mysqli_query($connect, "SELECT pro_ID, Name, Project 
+                                                    FROM darbuotojai.employees
+                                                    LEFT JOIN darbuotojai.projects
+                                                    ON darbuotojai.employees.pro_ID = darbuotojai.projects.ID
+                                                    order by pro_ID;");
         $emploAndProjects = mysqli_fetch_all($emploAndProjects);
         foreach ($emploAndProjects as $emploA) {
         ?>
@@ -27,10 +28,11 @@
                 <td scope="row" class="text-center" style="width:20%"><?= $emploA[0] ?></td>
                 <td class="text-center" style="width:30%"><?= $emploA[1] ?></td>
                 <td class="text-center" style="width:30%"><?= $emploA[2] ?></td>
-                <td class="text-center" style="width:20%">
-                    <a href="update.php?id=" type="button" class="btn btn-warning">
-                        UPDATE
-                    </a>
+                <td class="text-center" class="align-middle" style="width:20%">
+                    <form action="" name="action" method="post">
+                        <input class="center" type="hidden" name="action">
+                        <button type="submit" name="action" class="btn btn-warning">UPDATE</button>
+                    </form>
                 </td>
             </tr>
         <?php // vel prijungiu php koda
@@ -38,11 +40,23 @@
         ?>
     </tbody>
 </table>
-<!-- 
-<div class="container center_div">
-    <h4>Add new ITEM</h4>
-    <form action="./functions/create.php" method="post">
-        <input class="center" type="text" name="name" placeholder="Name">
-        <button type="submit">Add</button>
-    </form>
-</div> -->
+<?
+
+$logika = $_POST['action'];
+if (isset($logika)) 
+echo '
+<table class="table" style="background-color: #28A745;">
+<tbody>
+<tr>
+<td scope="row" class="text-center text-white" style="width:100%">
+    <h5>Update data to project and employees</h5>
+</td>
+</tr>
+</tbody>
+</table>
+<form action="./functions/create.php" method="post">
+    <input class="center" type="text" name="name" placeholder="Name">
+    <button type="submit">Add</button>
+</form>
+
+' ?>

@@ -20,9 +20,9 @@
     ?>
       <!-- atjungiu php koda -->
       <tr>
-        <td scope="row" class="text-center" style="width:20%"><?= $projekt[0] ?></td>
+        <td scope="row" class="text-center" style="width:30%"><?= $projekt[0] ?></td>
         <td class="text-center" style="width:40%"><?= $projekt[1] ?></td>
-        <td class="text-center" style="width:40%">
+        <td class="text-center" class="align-middle" style="width:30%">
           <a href="updatePRJ.php?id=<?= $projekt[0] ?>" type="button" class="btn btn-warning">
             UPDATE
           </a>

@@ -5,7 +5,7 @@ $id = $_GET['id'];
 $proj_to_update = mysqli_query($connect, "SELECT * FROM darbuotojai.projects
                                             where ID = '$id';");
 $proj = mysqli_fetch_assoc($proj_to_update);
-print_r($proj);
+//print_r($proj);
 ?>
 
 <!DOCTYPE html>
