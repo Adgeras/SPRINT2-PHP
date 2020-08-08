@@ -26,7 +26,7 @@
           <a href="updatePRJ.php?id=<?= $projekt[0] ?>" type="button" class="btn btn-warning">
             UPDATE
           </a>
-          <a href="delete.php?id=<?= $projekt[0] ?>" type="button" class="btn btn-danger">
+          <a href="deletePRJ.php?id=<?= $projekt[0] ?>" type="button" class="btn btn-danger">
             DELETE
           </a>
         </td>
