@@ -14,9 +14,9 @@ if (isset($oldNameID)) {
     if (isset($NEWname)) {
         mysqli_query($connect, "UPDATE `darbuotojai`.`ddarbuotojai` SET `Darbuotojo_Vardas` = $NEWname WHERE (`ID` = $oldNameID)");
         echo "veikia sita saka";
-        //header("location: http://localhost/SPRINT2PHP/?a=darbuotojai");
+        //header("location: http://localhost/SPRINT2PHPsenas/?a=darbuotojai");
     } else {
         mysqli_query($connect, "INSERT INTO `darbuotojai`.`projektai` (`Projektai`) VALUES ('$project')");
-        //header("location: http://localhost/SPRINT2PHP/?a=projektai");
-    } 
+        //header("location: http://localhost/SPRINT2PHPsenas/?a=projektai");
+    }
 }

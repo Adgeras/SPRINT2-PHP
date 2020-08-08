@@ -1,7 +1,25 @@
 body {
-    background-color: antiquewhite;
+    background-color: wheat;
+}
+
+.table {
+    width: 80% !important;
+    margin: auto;
 }
 .center_div {
     margin: 0 auto;
     width: 40%;
+}
+.btn {
+    line-height: 20px;
+    padding: 0 5px;
+    margin-top: 10px;
+}
+
+.btn:first-of-type{
+    margin-left: 10%;
+}
+
+.table td, .table th {
+    padding: 5px 5px;
 }

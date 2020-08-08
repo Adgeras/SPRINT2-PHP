@@ -25,8 +25,8 @@
             <!-- atjungiu php koda -->
             <tr>
                 <td scope="row" class="text-center" style="width:20%"><?= $emploA[0] ?></td>
-                <td class="text-center" style="width:40%"><?= $emploA[1] ?></td>
-                <td class="text-center" style="width:40%"><?= $emploA[2] ?></td>
+                <td class="text-center" style="width:30%"><?= $emploA[1] ?></td>
+                <td class="text-center" style="width:30%"><?= $emploA[2] ?></td>
                 <td class="text-center" style="width:20%">
                     <a href="update.php?id=" type="button" class="btn btn-warning">
                         UPDATE

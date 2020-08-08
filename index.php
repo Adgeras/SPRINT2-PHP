@@ -10,9 +10,9 @@
 </head>
 
 <body>
-  <a class="btn btn-primary" href="/SPRINT2PHP?a=darbuotojai">Employees</a>
-  <a class="btn btn-secondary" href="/SPRINT2PHP?a=projektai">Projects</a>
-  <a class="btn btn-success" href="/SPRINT2PHP?a=innerJoin">Employees&Projects</a>
+  <a class="btn btn-primary" href="/SPRINT2PHPsenas?a=darbuotojai">Employees</a>
+  <a class="btn btn-secondary" href="/SPRINT2PHPsenas?a=projektai">Projects</a>
+  <a class="btn btn-success" href="/SPRINT2PHPsenas?a=innerJoin">Employees&Projects</a>
 
   <?php
 
