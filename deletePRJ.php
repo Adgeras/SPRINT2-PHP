@@ -7,4 +7,4 @@ $prj_id = $_GET['id'];
 echo $id;
 
 mysqli_query($connect, "DELETE FROM `darbuotojai`.`Projects` WHERE (`ID` = '$prj_id');");
-header("location: http://localhost/SPRINT2PHPsenas/?a=projektai");
+header("location: http://localhost/SPRINT2PHP/?a=projektai");

@@ -12,5 +12,5 @@ $name = $_POST['name'];
 if (isset($name)) {
     mysqli_query($connect, "UPDATE `darbuotojai`.`employees` 
     SET `Name` = '$name' WHERE (`ID` = $id)");
-    header("location: http://localhost/SPRINT2PHPsenas/?a=darbuotojai");
+    header("location: http://localhost/SPRINT2PHP/?a=darbuotojai");
 }

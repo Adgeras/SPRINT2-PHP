@@ -54,7 +54,7 @@ echo '
 </tr>
 </tbody>
 </table>
-<form action="./functions/create.php" method="post">
+<form class="text-center action="./functions/create.php" method="post">
     <input class="center" type="text" name="name" placeholder="Name">
     <button type="submit">Add</button>
 </form>
