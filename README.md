@@ -9,9 +9,10 @@ Reikia:
 Veikiančios funkcijos:
     1. Darbuotoju lenteles atvaizdavimas
     2. Projektu lenteles atvaizdavimas
-    3. INNER JOIN Darbuotoju ir Projektu lenteles atvaizdavimas
-    4. Galima prideti darbuotoja.
-    5. Galima pridėti projektą
+    3. JOIN Darbuotoju ir Projektu lenteles atvaizdavimas
+    4. Galima prideti ir redaguoti darbuotoja.
+    5. Galima pridėti ir redaguoti projektą
+    
     
     thats all.... for today
     
