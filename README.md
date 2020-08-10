@@ -12,7 +12,8 @@ Veikiančios funkcijos:
     3. JOIN Darbuotoju ir Projektu lenteles atvaizdavimas
     4. Galima prideti ir redaguoti darbuotoja.
     5. Galima pridėti ir redaguoti projektą
+    6. Galima darbuotoją priskirti projektui.
     
     
-    thats all.... for today
+    
     
