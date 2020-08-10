@@ -4,7 +4,7 @@ Reikia:
 1. Download ZIP
 2. Extract to new AMPPS "www" directory named SPRINT2PHP (must create).
     (visi failai turi būti būtent direktorijoje SPRINT2PHP - juos reikia iskelti po išzipinimo iš šakos SPRINT2PHP-master)
-  3. Import database file 'Dump20200806.sql' to MySQL Workbench.
+  3. Import database file 'Dump20200810.sql' to MySQL Workbench.
 
 Veikiančios funkcijos:
     1. Darbuotoju lenteles atvaizdavimas
