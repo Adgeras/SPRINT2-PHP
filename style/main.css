@@ -24,3 +24,8 @@ body {
     padding: 5px 5px;
     vertical-align: middle;
 }
+h4 > strong {
+    color: red;
+    font-size: 20px;
+    text-decoration: underline;
+}

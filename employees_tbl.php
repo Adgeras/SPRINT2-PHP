@@ -1,10 +1,10 @@
-<table class="table" style="background-color: #007BFF;">
+<table class="table table-hover" style="background-color: #007BFF;">
     <thead>
         <tr>
             <th scope="col" class="text-center" style="width:10%">ID</th>
-            <th scope="col" class="text-center" style="width:20%">PRO_ID</th>
+            <th scope="col" class="text-center" style="width:10%">PRO_ID</th>
             <th scope="col" class="text-center" style="width:30%">Name</th>
-            <th scope="col" class="text-center" style="width:40%">Action</th>
+            <th scope="col" class="text-center" style="width:50%">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -23,10 +23,13 @@
             <tr>
                 <td scope="row" class="text-center" style="width:10%"><?= $emplo[0] ?></td>
                 <td class="text-center" style="width:10%"><?= $emplo[2] ?></td>
-                <td class="text-center" style="width:40%"><?= $emplo[1] ?></td>
-                <td class="text-center" class="align-middle" style="width:40%">
+                <td class="text-center" style="width:30%"><?= $emplo[1] ?></td>
+                <td class="text-center" class="align-right" style="width:50%">
                     <a href="updateEMP.php?id=<?= $emplo[0] ?>" type="button" class="btn btn-warning">
                         UPDATE
+                    </a>
+                    <a href="assign.php?id=<?= $emplo[0] ?>&a=<?= $emplo[2] ?>" type="button" class="btn btn-info">
+                        ASSIGN
                     </a>
                     <a href="deleteEMP.php?id=<?= $emplo[0] ?>" type="button" class="btn btn-danger">
                         DELETE

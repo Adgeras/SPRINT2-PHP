@@ -1,4 +1,4 @@
-<table class="table" style="background-color: #6C757D;">
+<table class="table table-hover" style="background-color: #6C757D;">
   <thead>
     <tr>
       <th scope="col" class="text-center" style="width:20%">ID</th>
